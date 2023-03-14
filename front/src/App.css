@@ -1,0 +1,39 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  width: 100vw;
+  color: #ffffff;
+
+  @media (max-width: 800px) {
+    height: auto;
+    padding: 0 16px;
+  }
+}
+
+.zk-connect-button {
+  font-size: 18px;
+  line-height: 29.35px;
+  font-family: "Sarala-Regular";
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+
+  color: white;
+  background-color: #1c2847;
+  border: 1px solid #3f4973;
+  border-radius: 10px;
+
+  cursor: pointer;
+
+  height: 59px;
+  outline: none;
+  width: 220px;
+}
+
+.zk-connect-button:disabled {
+  cursor: default;
+  font-style: italic;
+}
