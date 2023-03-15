@@ -1,10 +1,8 @@
 import styled from "styled-components";
-import { DiscordLogo, GithubRoundedLogo, TwitterLogo } from "../Logo";
+import { DiscordLogo, GithubRoundedLogo, TwitterLogo } from "../SismoReactIcon";
 import { ArrowSquareOut } from "phosphor-react";
 
 const Container = styled.header`
-  position: fixed;
-  bottom: 0;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -13,8 +11,8 @@ const Container = styled.header`
   color: ${props => props.theme.colors.white};
 
   @media (max-width: 800px) {
-    padding: 10px 0px;
-    width: calc(100% - 32px);
+    padding: 10px 16px;
+    margin-top: 30px;
   }
 `;
 
@@ -47,15 +45,8 @@ const ProveWithSismoLink = styled.a`
 
 const PWSLogo = styled.div`
   font-family: ${props => props.theme.fonts.logoBold};
-  font-size: 13.2772px;
-  line-height: 15px;
-  transform: translateY(1px);
-`;
-
-const PWSSmallLogo = styled.span`
-  font-family: ${props => props.theme.fonts.logoRegular};
-  font-size: 9.13px;
-  line-height: 15px;
+  font-size: 16px;
+  line-height: 16px;
 `;
 
 const ArrowLogoWrapper = styled.div`
@@ -101,7 +92,7 @@ export default function Footer() {
           target="_blank"
         >
           <PWSLogo>
-            PROVE<PWSSmallLogo> WITH </PWSSmallLogo>SISMO
+            zkConnect
           </PWSLogo>
 
           <ArrowLogoWrapper>

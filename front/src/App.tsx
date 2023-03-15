@@ -8,15 +8,22 @@ import Landing from "./components/Landing";
 import EmailForm from "./components/EmailForm";
 import NavBar from "./components/NavBar";
 import Loader from "./components/Loader";
-import { SismoZKProofLogo } from "./components/Logo";
-import { DataRequest, ZkConnect, ZkConnectClientConfig, ZkConnectResponse } from "@sismo-core/zk-connect-client";
+import { Gem } from "./components/SismoReactIcon";
+import {
+  DataRequest,
+  ZkConnect,
+  ZkConnectClientConfig,
+  ZkConnectResponse,
+} from "@sismo-core/zk-connect-client";
 
 const zkConnectConfig: ZkConnectClientConfig = {
   appId: "0x112a692a2005259c25f6094161007967"
-}
+};
 const zkConnect = ZkConnect(zkConnectConfig);
 
-const THE_MERGE_CONTRIBUTOR = DataRequest({ groupId: "0x42c768bb8ae79e4c5c05d3b51a4ec74a" });
+const THE_MERGE_CONTRIBUTOR = DataRequest({
+  groupId: "0x42c768bb8ae79e4c5c05d3b51a4ec74a",
+});
 
 function App() {
   const [verifying, setVerifying] = useState(false);
@@ -24,7 +31,8 @@ function App() {
     "already-subscribed" | "not-subscribed" | null
   >(null);
 
-  const [zkConnectResponse, setZkConnectResponse] = useState<ZkConnectResponse | null>(null);
+  const [zkConnectResponse, setZkConnectResponse] =
+    useState<ZkConnectResponse | null>(null);
 
   function onZkConnectButtonClick() {
     zkConnect.request({
@@ -64,7 +72,6 @@ function App() {
 
         {!subscriptionStatus && (
           <Landing>
-
             <button
               className="zk-connect-button"
               onClick={onZkConnectButtonClick}
@@ -77,12 +84,11 @@ function App() {
                 </>
               ) : (
                 <>
-                  <SismoZKProofLogo size={19} color={"#ffffff"} />
+                  <Gem className="zk-gem"/>
                   <span>zkConnect</span>
                 </>
               )}
             </button>
-            
           </Landing>
         )}
 

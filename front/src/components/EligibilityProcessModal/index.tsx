@@ -81,19 +81,14 @@ export default function EligibilityProcessModal({
   return (
     <Modal isOpen={isOpen} onClose={onClose} animated>
       <Container>
-        <Title>Prove with sismo</Title>
+        <Title>zkConnect</Title>
         <ImageWrapper>
           <img src="/assets/process.svg" alt="process" width={"100%"} />
         </ImageWrapper>
         <Content>
-          <Subtitle>ZK Proof of eligibility</Subtitle>
+          <Subtitle>ZK proof of eligibility</Subtitle>
           <Text>
-            Prove with Sismo lets you prove your eligibility for the Mergooor
-            Pass and mint it on any wallet. The{" "}
-            <Bold>
-              source account used to prove your eligibility will not be revealed
-            </Bold>{" "}
-            in the process.
+          You will be directed to Sismo to <Bold>generate a ZK proof to prove ownership of your data.</Bold> After generating the proof, you will be able to <Bold>subscribe to the service.</Bold>
           </Text>
         </Content>
       </Container>

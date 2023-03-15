@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import { ArrowUpRight } from "phosphor-react";
-import { DevconLogo, EdconLogo, EthccLogo, EthGlobalLogo } from "../Logo";
+import { DevconLogo, EdconLogo, EthccLogo, EthGlobalLogo } from "../SismoReactIcon";
 
 const Container = styled.div`
   align-self: center;

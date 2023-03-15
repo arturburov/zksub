@@ -4,7 +4,7 @@ import { AxiosResponse } from "axios";
 import { Paperclip } from "phosphor-react";
 import Input from "../Input";
 import Button from "../Button";
-import { SismoZKProofLogo } from "../Logo";
+import { SismoZKProofLogo } from "../SismoReactIcon";
 import colors from "../../theme/colors";
 
 const Container = styled.div`
@@ -12,8 +12,10 @@ const Container = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 100vh;
   font-family: ${props => props.theme.fonts.regular};
+  @media (max-width: 800px) {
+    padding: 0 16px;
+  }
 `;
 
 const Title = styled.div`
@@ -214,10 +216,10 @@ export default function EmailForm({
       {status === "not-subscribed" && (
         <>
           <EligibleTitle>you are eligible</EligibleTitle>
-          <Subtitle>for the ZK Mailing list</Subtitle>
+          <Subtitle>for premium access to web3 events</Subtitle>
           <EligibleText>
             Enter an email to receive exclusive access to reserved tickets for
-            the web3 events.
+            upcoming web3 events.
           </EligibleText>
           <Input
             style={{ marginBottom: 20 }}

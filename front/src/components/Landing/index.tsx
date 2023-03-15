@@ -1,16 +1,17 @@
 import styled from "styled-components";
-import { useState } from "react";
-import { Question } from "phosphor-react";
-import EligibilityProcessModal from "../EligibilityProcessModal";
 import LinkGroup from "../LinkGroup";
+import Search from "../Search";
 
 const Container = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 100vh;
   font-family: ${props => props.theme.fonts.regular};
+
+  @media (max-width: 800px) {
+    padding: 0 16px;
+  }
 `;
 
 const Title = styled.div`
@@ -32,9 +33,9 @@ const Subtitle = styled.div`
   font-size: 18px;
   line-height: 24px;
   color: ${props => props.theme.colors.blue10};
-  width: 500px;
+  width: 654px;
   text-align: center;
-  margin-bottom: 50px;
+  margin-bottom: 20px;
 
   @media (max-width: 800px) {
     font-size: 16px;
@@ -48,7 +49,7 @@ const Text = styled.div`
   line-height: 14px;
   color: ${props => props.theme.colors.blue10};
   text-align: center;
-  margin-bottom: 50px;
+  margin-bottom: 30px;
 
   @media (max-width: 800px) {
     margin-bottom: 40px;
@@ -59,34 +60,18 @@ const CallToAction = styled.div`
   display: flex;
   flex-direction: column;
   align-items: flex-end;
-  width: 220px;
   gap: 4px;
 `;
 
-const EligibilityDescription = styled.div`
-  display: flex;
-  align-items: center;
-  gap: 1.54px;
-  font-size: 8px;
-  line-height: 9px;
-  color: ${props => props.theme.colors.white};
-  font-family: ${props => props.theme.fonts.medium};
-  cursor: pointer;
-`;
 
 type Props = {
   children: React.ReactNode;
 };
 
 export default function Landing({ children }: Props): JSX.Element {
-  const [isModalOpen, setIsModalOpen] = useState(false);
 
   return (
     <>
-      <EligibilityProcessModal
-        isOpen={isModalOpen}
-        onClose={() => setIsModalOpen(false)}
-      />
       <Container>
         <Title>The Merge Contributors mailing list</Title>
 
@@ -104,11 +89,10 @@ export default function Landing({ children }: Props): JSX.Element {
           for contributors to The Merge.
         </Text>
 
+        <Search />
+
         <CallToAction>
-          <EligibilityDescription onClick={() => setIsModalOpen(true)}>
-            ZK proof of eligibility process{" "}
-            <Question size={8} weight={"regular"} />
-          </EligibilityDescription>
+          
           {children}
         </CallToAction>
       </Container>

@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import Loader from "../Loader";
-import { SismoZKProofLogo } from "../Logo";
+import { SismoZKProofLogo } from "../SismoReactIcon";
 
 export const Container = styled.button<{
   disabled?: boolean;

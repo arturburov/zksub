@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { ZKMailingLogo } from "../Logo/components/ZKMailingLogo";
+import { ZKMailingLogo } from "../SismoReactIcon/components/ZKMailingLogo";
 import axios from "axios";
 import env from "../../environment";
 
@@ -7,14 +7,13 @@ const Container = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  position: fixed;
   padding: 40.56px 60px;
   cursor: pointer;
   width: 100%;
 
   @media (max-width: 800px) {
     padding: 4px 16px;
-    width: 100%;
+    margin-bottom: 18px;
   }
 `;
 
@@ -36,11 +35,11 @@ const ResetBtn = styled.div`
 `;
 
 export default function NavBar(): JSX.Element {
-  async function onReset() {
-    await axios.post(`${env.zkMailingApiUrl}/reset`).then(res => {
-      window.location = window.location.pathname as unknown as Location;
-    });
-  }
+  // async function onReset() {
+  //   await axios.post(`${env.zkMailingApiUrl}/reset`).then(res => {
+  //     window.location = window.location.pathname as unknown as Location;
+  //   });
+  // }
 
   return (
     <Container>
@@ -52,7 +51,7 @@ export default function NavBar(): JSX.Element {
         <ZKMailingLogo />
       </div>
 
-      <ResetBtn onClick={onReset}>Reset demo</ResetBtn>
+      {/* <ResetBtn onClick={onReset}>Reset demo</ResetBtn> */}
     </Container>
   );
 }
