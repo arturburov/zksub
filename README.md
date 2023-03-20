@@ -47,9 +47,6 @@ cd front
 # Install dependencies
 yarn 
 
-# Start front in dev env
-yarn dev
-
 # Start front
 yarn start
 ```

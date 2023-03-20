@@ -23,7 +23,6 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "dev": "cp public/envs/env.local.js public/envs/env.js && yarn start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
