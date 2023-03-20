@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@sismo-core/zk-connect-client": "^0.0.1",
+    "@sismo-core/zk-connect-react": "^0.0.2",
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
@@ -23,6 +23,7 @@
   },
   "scripts": {
     "start": "react-scripts start",
+    "dev": "cp public/envs/env.local.js public/envs/env.js && yarn start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"

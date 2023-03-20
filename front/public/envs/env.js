@@ -1,6 +1,7 @@
+// localhost:3001
 window.env = {
-  name: "STAGING",
+  name: "LOCAL",
   zkMailingApiUrl: "http://localhost:8080",
-  vaultBaseUrl: "https://dev.vault-beta.sismo.io",
+  vaultBaseUrl: "http://localhost:3000",
   sismoHubUrl: "https://hub.sismo.io",
 };

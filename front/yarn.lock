@@ -1715,6 +1715,13 @@
     "@ethersproject/bignumber" "5.7.0"
     graphql "^16.6.0"
 
+"@sismo-core/zk-connect-react@^0.0.2":
+  version "0.0.2"
+  resolved "https://registry.yarnpkg.com/@sismo-core/zk-connect-react/-/zk-connect-react-0.0.2.tgz#53869f6a578460c8ea5280eb017289b622955c3b"
+  integrity sha512-VsprVKQjRQIsTO4UU3ywlew7nCXKOk7tqgxKXMdu7Ru1xYlrQDpji0OiiPDAyPIH//Hx+UTKXYV8lj7uzCy7ZQ==
+  dependencies:
+    "@sismo-core/zk-connect-client" "^0.0.1"
+
 "@surma/rollup-plugin-off-main-thread@^2.2.3":
   version "2.2.3"
   resolved "https://registry.yarnpkg.com/@surma/rollup-plugin-off-main-thread/-/rollup-plugin-off-main-thread-2.2.3.tgz#ee34985952ca21558ab0d952f00298ad2190c053"
