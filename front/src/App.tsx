@@ -8,21 +8,15 @@ import Landing from "./components/Landing";
 import EmailForm from "./components/EmailForm";
 import NavBar from "./components/NavBar";
 import {
+  AuthType,
   ZkConnectButton,
   ZkConnectClientConfig,
-  ZkConnectResponse
+  ZkConnectResponse,
 } from "@sismo-core/zk-connect-react";
 
 const config: ZkConnectClientConfig = {
   appId: "0x112a692a2005259c25f6094161007967",
-  devMode: {
-		enabled: env.name === "LOCAL", 
-		devAddresses: [ 
-      // Add your dev addresses here to become eligible in the DEV env
-		  "0xb01ee322C4f028B8A6BFcD2a5d48107dc5bC99EC" 
-		],
-	}
-}
+};
 
 function App() {
   const [verifying, setVerifying] = useState(false);
@@ -40,31 +34,33 @@ function App() {
     });
   }
 
-  console.log("env.name", env.name);
-
   return (
     <Theme>
       <div className="container">
         <NavBar />
-        
+
         {!subscriptionStatus && (
           <Landing>
-            <ZkConnectButton 
+            <ZkConnectButton
               config={config}
-              dataRequest={{
-                //The merge contributor groupId
-                groupId: "0x42c768bb8ae79e4c5c05d3b51a4ec74a"
+              claimRequest={{
+                groupId: "0x42c768bb8ae79e4c5c05d3b51a4ec74a",
+              }}
+              authRequest={{
+                authType: AuthType.ANON,
               }}
               onResponse={(response) => {
                 setZkConnectResponse(response);
                 setVerifying(true);
                 axios
-                  .post(`${env.zkMailingApiUrl}/subscribe`, { zkConnectResponse: response })
-                  .then(res => {
+                  .post(`${env.zkMailingApiUrl}/subscribe`, {
+                    zkConnectResponse: response,
+                  })
+                  .then((res) => {
                     setVerifying(false);
                     setSubscriptionStatus(res.data.status);
                   })
-                  .catch(err => {
+                  .catch((err) => {
                     console.log(err.response.data.status);
                     setVerifying(false);
                   });

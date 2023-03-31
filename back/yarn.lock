@@ -411,10 +411,10 @@
     ethers "^5.6.1"
     tslib "^2.4.0"
 
-"@sismo-core/zk-connect-server@^0.0.1":
-  version "0.0.1"
-  resolved "https://registry.yarnpkg.com/@sismo-core/zk-connect-server/-/zk-connect-server-0.0.1.tgz#c88ea01ec232b8e821f9328fe978e71b82656db5"
-  integrity sha512-BvnfJqRaStxOaVTZfqJ0r8qX1v5bNNUpnt7KUOPKlV1bbRjM8Q2iaTbYS3BkrKma1C3bGf96uTRUP0SN2g0vsg==
+"@sismo-core/zk-connect-server@0.0.2-beta.10":
+  version "0.0.2-beta.14"
+  resolved "https://registry.yarnpkg.com/@sismo-core/zk-connect-server/-/zk-connect-server-0.0.2-beta.14.tgz#10cf996b147a0b91a3f8df9cb4ed0d42360a04f8"
+  integrity sha512-szxJg00fwWTPPGYdnTcxuO3/2T3xUFQHxaIgoks+nHKTh3WrrLMiHuv+N+VcdvPuVdzoxrKJVwT8C7dAZ7jlAQ==
   dependencies:
     "@ethersproject/bignumber" "^5.7.0"
     "@sismo-core/hydra-s2" "^1.0.0"

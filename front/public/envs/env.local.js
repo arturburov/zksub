@@ -2,6 +2,6 @@
 window.env = {
   name: "LOCAL",
   zkMailingApiUrl: "http://localhost:8080",
-  vaultBaseUrl: "http://localhost:3000",
+  vaultBaseUrl: "https://localhost:3000",
   sismoHubUrl: "https://hub.sismo.io",
 };
